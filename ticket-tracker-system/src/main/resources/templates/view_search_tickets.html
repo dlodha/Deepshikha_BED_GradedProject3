@@ -36,15 +36,16 @@
 			<h1>List Of Tickets</h1>
 	</div>
 		
-		<div class="row">
-			<div class="col-lg-3">
-	      <form th:action="@{/tickets/search{searchStr} (searchStr=${title})}" th:object = "${tickets}"  method="GET">
-            <div>
-                <input type="text" id="title" name = "title" th:name="title" th:value="${title}">
-                	<button type="submit" class = "btn btn-primary">
-								Submit
-				    </button>
-            </div>
+	
+	         <form th:action="@{/tickets/search{searchStr} (searchStr=${title})}" th:object = "${tickets}"  method="GET">
+                 <div class="container">
+                   <div class="row">
+                     <div class="col-md-12 bg-light text-left">
+                      <input type="text" id="title" name = "title" th:name="title" th:value="${title}">
+                	  <button type="submit" class = "btn btn-primary">Search</button>
+                	  </div>
+                  </div>
+              </div>
            </form>
 			</div>
 		</div>
